@@ -1,164 +1,108 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a | */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Rock+Salt&display=swap');
-
-:root {
-  /* change the values below to your colors from your palette */
-  --primary-color: #0b132b;
-  --secondary-color: #1c2541;
-  --accent1-color: #3a506b;
-  --accent2-color: #5bc0be;
-
-  /* change the values below to your chosen font(s) */
-  --heading-font: "Rock Salt";
-  --paragraph-font: Roboto, Helvetica, sans-serif;
-
-  /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #f4a261;  /* headlines on a white background */ 
-  --headline-color-on-color: white; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #396E94; /* paragraph text on a white background */ 
-  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #396E94  ;
-  --nav-link-color: #396E94;
-  --nav-background-color: #f4a261;
-  --nav-hover-link-color: white;
-  --nav-hover-background-color: #396E94;
-}
-
-
-/*  Look around below...but DON'T CHANGE ANYTHING! */
-
-body {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 4em;
-  font-size: 18px;
-  text-align: center;
-}
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
-}
-h2 {
-  text-align: center;
-}
-hr {
-  height: 3px;
-  margin: 35px 0;
-  background: var(--accent1-color);
-}
-header {
-  padding: 1em;
-  text-align: center;
-  color: var(--paragraph-color-on-color);
-  background-color: var(--paragraph-background-color);
-}
-header > h1, header > h2 {
-  color: var(--headline-color-on-color);
-}
-p {
-  font-family: var(--paragraph-font);
-  color: var(--paragraph-color);
-  padding: 1em;
-}
-.colors {
-  width: 100%;
-  min-width: 350px;
-  margin: 30px auto;
-  text-align: center;
-}
-.colors th {
-  background-color: #999;
-}
-.colors td{
-  width: 25%;
-  height: 3em;
-}
-.primary {
-  background-color: var(--primary-color);
-}
-.secondary {
-  background-color: var(--secondary-color);
-}
-.accent1 {
-  background-color: var(--accent1-color);
-}
-.accent2{
-  background-color: var(--accent2-color);
-}
-p.colored {
-  background-color: var(--paragraph-background-color);
-  color: var(--paragraph-color-on-color);
+header{
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/span 2;
 }
 nav {
-  background-color: var(--nav-background-color);
-  line-height: 3em;
-  text-align: center;
-  font-size: 1.2em;
+    display: flex;
+    justify-content: space-around;
 }
-nav  {
-  list-style-type: none;
-  display: flex;
+nav a{
+    text-align:center;
+    color:#f4a261;
+    text-decoration:none;
+    padding: 35px;
 }
-nav a {
-  padding:1em;
-  min-width: 120px;
-  text-decoration: none;
-  padding: 10px;
+nav a:hover{
+    background-color:#0b132b;
+    color:#5bc0be;
 }
-nav a:link, nav a:visited {
-  color: var(--nav-link-color);
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    background-color:#3a506b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:22px;
 }
-nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
+.home-title{
+    color:#5bc0be;
+    font-size:2em;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    text-align: center;
+    grid-column: 1/span 2;
 }
-.sitemap {
-  display: grid;
-  justify-content: center;
-
-  grid-template-columns: repeat(6, 15%);
-  grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
-    ". . . top . ."
-    ". left left right right ."
-    "page2 page2 . . page3 page3";
+p{
+    color:#f4a261;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 100px;
+    grid-column: 1/span 2;  
 }
-.sitemap > div {
-  text-align: center;
+#logo_link {
+    position: relative;
+    padding-top: 5px;
+    margin-left: 600px;
 }
-.sm-home {
-  grid-area: home;
-  background-color: #ccc;
-  line-height: 3em;
+footer{
+    background-color:#2c3e53;
+    padding: 25px 50px;
+    margin-top: 200px;
+    grid-column: 1/span 2;
 }
-.sm-page2 {
-  grid-area: page2;
-  background-color: #ccc;
-  line-height: 3em;
+footer h3{
+    color:#f4a261;
 }
-.sm-page3 {
-  grid-area: page3;
-  background-color: #ccc;
-  line-height: 3em;
+footer a{
+    color:#f4a261;
+    text-decoration: none;
 }
-.top {
-  grid-area: top;
-  border-left: 1px solid;
+footer a:hover{
+    color:#f4a261;
 }
-.left {
-  grid-area: left;
-  border-top: 1px solid;
-  border-left: 1px solid;
+#hero-box {
+    grid-column: 1/span 2;
+    grid-row: 4/5;
+    margin-left: 325px;
 }
-.right {
-  grid-area: right;
-  border-top: 1px solid;
-  border-right: 1px solid;
+#hero-img{
+    width:70%;
+}
+.icon{
+    width:80px;
+    padding-top: 10px;
+}
+footer .social img{
+    padding-top: 15px;
+}
+@media screen and (max-width: 900px) {
+    #logo_link {
+        padding-top: 5px;
+        justify-self: center;
+        align-self: center;
+    }
+    nav, footer {
+        flex-direction: column;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+    }
+    .home-title {
+        font-size: 25px;
+        color: #6f7364;
+    }
+    #background {
+        display: none;
+    }
+    footer {
+        margin-top: 25px;
+    }
+    .img-one{
+        justify-self: center;
+        align-self: center;
+    }
 }
