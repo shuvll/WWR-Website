@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    background-color: #3a506b;
 }
 
 .wrapper {
@@ -21,6 +22,7 @@ h2 {
     font-size: 48px;
     line-height: 44px;  
     text-align: center;
+    color: #5bc0be;
 }
 
 .img-info h3 {
@@ -28,6 +30,7 @@ h2 {
     font-family: arial;
     font-size: 36px;
     line-height: 44px;
+    color: #f4a261;
 }
 
 .img-picture {
