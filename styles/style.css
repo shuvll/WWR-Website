@@ -1,15 +1,20 @@
 #content{
     max-width: 1600px; margin: 0 auto;
 }
+.home-grid {
+    display: grid;
+}
 nav {
     display: flex;
     justify-content: space-around;
+    height: 200px;
+    padding-left: 100px;
 }
 nav a{
     text-align:center;
     color:#f4a261;
     text-decoration:none;
-    padding: 35px;
+    padding: 75px;
 }
 nav a:hover{
     background-color:#0b132b;
@@ -17,6 +22,7 @@ nav a:hover{
 }
 #logo_link {
     padding-top: 5px;
+    padding-left: 125px;
     justify-self: center;
     align-self: center;
 }
@@ -141,6 +147,7 @@ footer .social img{
     grid-column: 5/7;
     grid-row: 2/3;
     margin:200px 0;
+    padding-left: 125px;
 }
 .rapids-card {
     grid-column: 8/10;
